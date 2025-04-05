@@ -43,6 +43,9 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Install dependencies
+        run: npm install
+
       - name: Validate Dependencies
         uses: actions/dependency-review-action@v4
         with:

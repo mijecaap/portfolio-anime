@@ -2,7 +2,7 @@
 
 Portafolio personal desarrollado con Astro y React, con un diseño inspirado en el anime y efectos visuales modernos.
 
-[![Portfolio Demo](capture-web.png)](https://mijecaap.github.io/portfolio/)
+[![Portfolio Demo](./src/assets/capture-web.png)](https://mijecaap.github.io/portfolio/)
 
 ## 🚀 Características
 

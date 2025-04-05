@@ -1,0 +1,77 @@
+---
+import ProjectCard from './ProjectCard.astro';
+import SolDeAmerica from '../../assets/sol-de-america.jpg';
+
+const projects = [
+    {
+        title: "Sol de América",
+        imageUrl: SolDeAmerica,
+        technologies: ["React", "NestJS", "PostgreSQL"],
+        demoUrl: "https://demo.com",
+        githubUrl: "https://github.com/user/repo",
+        role: "Fullstack Developer",
+        challenge: "Implementación de sistema de pagos y autenticación",
+        highlights: [
+            "Auth + pagos con Stripe",
+            "Arquitectura con NestJS",
+            "CI/CD con GitHub Actions"
+        ]
+    },
+    {
+        title: "Sol de América",
+        imageUrl: SolDeAmerica,
+        technologies: ["React", "NestJS", "PostgreSQL"],
+        demoUrl: "https://demo.com",
+        githubUrl: "https://github.com/user/repo",
+        role: "Fullstack Developer",
+        challenge: "Implementación de sistema de pagos y autenticación",
+        highlights: [
+            "Auth + pagos con Stripe",
+            "Arquitectura con NestJS",
+            "CI/CD con GitHub Actions"
+        ]
+    },
+    {
+        title: "Sol de América",
+        imageUrl: SolDeAmerica,
+        technologies: ["React", "NestJS", "PostgreSQL"],
+        demoUrl: "https://demo.com",
+        githubUrl: "https://github.com/user/repo",
+        role: "Fullstack Developer",
+        challenge: "Implementación de sistema de pagos y autenticación",
+        highlights: [
+            "Auth + pagos con Stripe",
+            "Arquitectura con NestJS",
+            "CI/CD con GitHub Actions"
+        ]
+    },
+    {
+        title: "Sol de América",
+        imageUrl: SolDeAmerica,
+        technologies: ["React", "NestJS", "PostgreSQL"],
+        demoUrl: "https://demo.com",
+        githubUrl: "https://github.com/user/repo",
+        role: "Fullstack Developer",
+        challenge: "Implementación de sistema de pagos y autenticación",
+        highlights: [
+            "Auth + pagos con Stripe",
+            "Arquitectura con NestJS",
+            "CI/CD con GitHub Actions"
+        ]
+    }
+];
+---
+
+<section id="proyectos" class="py-20">
+    <div class="max-w-7xl mx-auto px-6">
+        <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 text-white">
+            Proyectos
+            <span class="block h-1 w-20 bg-[#2196F3] mx-auto mt-4"></span>
+        </h2>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+            {projects.map(project => (
+                <ProjectCard project={project} />
+            ))}
+        </div>
+    </div>
+</section>

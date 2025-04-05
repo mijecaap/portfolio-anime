@@ -1,0 +1,13 @@
+---
+import '../../styles/animations.css';
+import '../../styles/hero-banner.css';
+import HeroContent from './HeroContent.astro';
+import ProfileImage from './ProfileImage.astro';
+---
+
+<div class="hero-banner relative min-h-[750px] md:h-[600px] text-white overflow-hidden py-20">
+    <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-8 h-full px-6 relative py-12">
+        <HeroContent />
+        <ProfileImage />
+    </div>
+</div>

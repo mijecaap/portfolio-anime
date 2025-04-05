@@ -1,0 +1,30 @@
+---
+import TechIcons from './TechIcons';
+import CV from '../../assets/cv-miguel.pdf';
+---
+
+<div class="w-full md:w-1/2 z-10 font-poppins fade-in">
+    <div class="space-y-8">
+        <div>
+            <p class="text-3xl md:text-4xl font-medium text-white mb-3">Hola, soy</p>
+            <h1 class="text-5xl md:text-7xl font-bold text-[#FF9800] tracking-wide hover:scale-105 transition-transform cursor-default mb-3">MIGUEL</h1>
+            <p class="text-3xl md:text-4xl font-bold text-[#64B5F6]">FULL STACK</p>
+            <p class="text-3xl md:text-4xl font-bold text-[#64B5F6] mb-3">DEVELOPER</p>
+            <p class="text-lg text-gray-300 mt-6 max-w-md">
+                Desarrollador apasionado por crear experiencias web únicas y funcionales. 
+                Especializado en React y NestJS.
+            </p>
+        </div>
+        <div class="mt-8 slide-in-left">
+            <TechIcons client:visible />
+        </div>
+        <div class="flex gap-4 pt-6 slide-in-bottom">
+            <a href="#proyectos" class="btn-primary">
+                Ver Proyectos
+            </a>
+            <a href={CV} class="btn-secondary" download="cv-miguel.pdf">
+                Descargar CV
+            </a>
+        </div>
+    </div>
+</div>

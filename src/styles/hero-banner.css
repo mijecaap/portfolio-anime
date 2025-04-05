@@ -1,0 +1,43 @@
+.hero-banner {
+    background: linear-gradient(135deg, #1a1a1a 0%, #1976D2 100%);
+    position: relative;
+}
+
+.hero-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 50% 50%, rgba(33, 150, 243, 0.2) 0%, rgba(25, 118, 210, 0.1) 25%, rgba(33, 150, 243, 0) 50%);
+    z-index: 1;
+}
+
+.hero-banner::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+        radial-gradient(circle, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 20px 20px, 30px 30px;
+    background-position: 0 0, 15px 15px;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.btn-primary {
+    @apply px-6 py-2 bg-[#2196F3] text-white rounded-lg font-medium 
+    hover:bg-[#1976D2] transition-colors shadow-lg hover:shadow-xl
+    hover:-translate-y-0.5 transition-transform;
+}
+
+.btn-secondary {
+    @apply px-6 py-2 border-2 border-[#2196F3] text-white rounded-lg font-medium
+    hover:bg-[#2196F3]/10 transition-colors shadow-lg hover:shadow-xl
+    hover:-translate-y-0.5 transition-transform;
+}

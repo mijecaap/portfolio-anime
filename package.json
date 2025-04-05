@@ -1,7 +1,10 @@
 {
   "name": "portfolio-anime",
   "type": "module",
-  "version": "0.0.1",
+  "version": "1.0.0",
+  "engines": {
+    "node": "20.19.0"
+  },
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
@@ -9,6 +12,14 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.6.1"
+    "@astrojs/react": "^4.2.3",
+    "astro": "^5.6.1",
+    "d3": "^7.9.0",
+    "d3-cloud": "^1.2.7",
+    "react-icons": "^5.5.0"
+  },
+  "devDependencies": {
+    "@astrojs/tailwind": "^6.0.2",
+    "tailwindcss": "^3.4.17"
   }
 }

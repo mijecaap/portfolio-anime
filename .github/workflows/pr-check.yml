@@ -30,9 +30,26 @@ jobs:
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v3
 
+  dependabot:
+    name: Validate Dependabot
+    runs-on: ubuntu-latest
+    if: ${{ github.actor == 'dependabot[bot]' }}
+    permissions:
+      pull-requests: read
+      contents: read
+      security-events: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Validate Dependabot PR
+        uses: actions/dependency-review-action@v4
+        with:
+          fail-on-severity: high
+
   build:
     runs-on: ubuntu-latest
-    needs: analyze
+    needs: [analyze, dependabot]
     steps:
       - name: Checkout
         uses: actions/checkout@v4

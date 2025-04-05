@@ -4,6 +4,6 @@ import tailwind from '@astrojs/tailwind';
 
 export default defineConfig({
   site: 'https://mijecaap.github.io',
-  base: '/portfolio-anime',
+  base: '/portfolio',
   integrations: [react(), tailwind()]
 });

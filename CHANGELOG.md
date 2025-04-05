@@ -5,6 +5,12 @@ Todas las modificaciones notables a este proyecto serán documentadas en este ar
 El formato está basado en [Keep a Changelog](https://keepachangelog.com/es-ES/1.0.0/),
 y este proyecto adhiere a [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.1] - 2024-03-21
+
+### Añadido
+- Configuración de despliegue automático a GitHub Pages
+- Workflow de GitHub Actions para CI/CD
+
 ## [1.0.0] - 2024-03-21
 
 ### Añadido

@@ -2,7 +2,7 @@
 
 Portafolio personal desarrollado con Astro y React, con un diseño inspirado en el anime y efectos visuales modernos.
 
-![Portfolio Demo](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+[![Portfolio Demo](./src/assets/capture-web.png)](https://mijecaap.github.io/portfolio/)
 
 ## 🚀 Características
 
@@ -51,12 +51,12 @@ Portafolio personal desarrollado con Astro y React, con un diseño inspirado en 
 
 1. Clona el repositorio:
 \`\`\`bash
-git clone https://github.com/tu-usuario/portfolio-anime.git
+git clone https://github.com/mijecaap/portfolio.git
 \`\`\`
 
 2. Instala las dependencias:
 \`\`\`bash
-cd portfolio-anime
+cd portfolio
 npm install
 \`\`\`
 

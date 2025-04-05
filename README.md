@@ -1,48 +1,86 @@
-# Astro Starter Kit: Basics
+# Portfolio Anime 🎨
 
-```sh
-npm create astro@latest -- --template basics
-```
+Portafolio personal desarrollado con Astro y React, con un diseño inspirado en el anime y efectos visuales modernos.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+![Portfolio Demo](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## 🚀 Características
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+- 💫 Animaciones suaves y transiciones
+- 🎴 Tarjetas flip para proyectos
+- 🌟 Nube de habilidades interactiva con D3.js
+- 📱 Diseño totalmente responsivo
+- 🎯 Tooltips interactivos en la sección de experiencia
+- 🗺️ Mapa de ubicación integrado
+- 📬 Formulario de contacto con validación
+- 🔗 Iconos flotantes de redes sociales
 
-## 🚀 Project Structure
+## 🛠️ Tecnologías
 
-Inside of your Astro project, you'll see the following folders and files:
+- [Astro](https://astro.build)
+- [React](https://reactjs.org)
+- [Tailwind CSS](https://tailwindcss.com)
+- [D3.js](https://d3js.org)
+- [React Icons](https://react-icons.github.io/react-icons)
+
+## 📁 Estructura del Proyecto
 
 ```text
 /
-├── public/
-│   └── favicon.svg
 ├── src/
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
+│   ├── assets/         # Imágenes y recursos estáticos
+│   ├── components/     # Componentes reutilizables
+│   │   ├── Contact/    # Componentes de la sección de contacto
+│   │   ├── Experience/ # Componentes de experiencia laboral
+│   │   ├── Hero/       # Componentes del banner principal
+│   │   ├── Navbar/     # Navegación
+│   │   ├── Projects/   # Componentes de proyectos
+│   │   └── Skills/     # Componentes de habilidades
+│   ├── layouts/        # Plantillas base
+│   ├── pages/          # Páginas de la aplicación
+│   └── styles/         # Estilos globales y animaciones
+└── public/            # Archivos públicos
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+## 🔧 Pre-requisitos
 
-## 🧞 Commands
+- Node.js 20.19.0
+- npm
 
-All commands are run from the root of the project, from a terminal:
+## ⚙️ Instalación
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+1. Clona el repositorio:
+\`\`\`bash
+git clone https://github.com/tu-usuario/portfolio-anime.git
+\`\`\`
 
-## 👀 Want to learn more?
+2. Instala las dependencias:
+\`\`\`bash
+cd portfolio-anime
+npm install
+\`\`\`
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+3. Inicia el servidor de desarrollo:
+\`\`\`bash
+npm run dev
+\`\`\`
+
+## 📦 Comandos
+
+| Comando           | Acción                                             |
+|------------------|---------------------------------------------------|
+| npm run dev      | Inicia servidor de desarrollo en localhost:4321    |
+| npm run build    | Construye el sitio para producción en ./dist/     |
+| npm run preview  | Vista previa local de la build de producción      |
+
+## 🚀 Despliegue
+
+El proyecto está configurado para desplegarse automáticamente en GitHub Pages mediante GitHub Actions cuando se hace push a la rama main.
+
+## 📝 Changelog
+
+Consulta el [CHANGELOG.md](CHANGELOG.md) para ver los cambios en cada versión.
+
+## 📄 Licencia
+
+Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE.md](LICENSE.md) para más detalles.

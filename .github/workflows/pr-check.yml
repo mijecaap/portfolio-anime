@@ -34,7 +34,7 @@ jobs:
     name: Validate Dependabot
     runs-on: ubuntu-latest
     permissions:
-      pull-requests: read
+      pull-requests: write
       contents: read
       security-events: write
     steps:
@@ -45,6 +45,7 @@ jobs:
         uses: actions/dependency-review-action@v4
         with:
           fail-on-severity: high
+          comment-summary-in-pr: true
 
   build:
     runs-on: ubuntu-latest

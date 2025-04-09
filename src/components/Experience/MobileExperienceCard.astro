@@ -1,0 +1,40 @@
+---
+import { Image } from 'astro:assets';
+
+const { experience } = Astro.props;
+---
+
+<div class="bg-[#1a1a1a] rounded-lg p-6 border border-[#2196F3]/10 hover:border-[#2196F3]/30 
+            transition-all duration-300 hover:shadow-lg space-y-4 relative overflow-hidden">
+    <div class="flex items-center gap-4">
+        <div class="w-16 h-16 flex-shrink-0">
+            <Image 
+                src={experience.icon}
+                alt={`${experience.company} logo`}
+                class="w-full h-full object-contain"
+            />
+        </div>
+        <div>
+            <h3 class="text-lg font-bold text-white">{experience.company}</h3>
+            <p class="text-[#64B5F6] font-medium">{experience.role}</p>
+            <p class="text-gray-400 text-sm">{experience.period}</p>
+        </div>
+    </div>
+
+    <ul class="text-gray-300 text-sm space-y-2 pl-4">
+        {experience.responsibilities.map((resp: String) => (
+            <li class="flex items-start gap-2">
+                <span class="text-[#64B5F6] flex-shrink-0">•</span>
+                <span>{resp}</span>
+            </li>
+        ))}
+    </ul>
+
+    <div class="absolute top-0 right-0 w-24 h-24 opacity-5 pointer-events-none">
+        <Image 
+            src={experience.icon}
+            alt="background icon"
+            class="w-full h-full object-contain"
+        />
+    </div>
+</div>

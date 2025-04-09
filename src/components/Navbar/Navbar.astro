@@ -1,20 +1,15 @@
 ---
+import { siteConfig } from '../../config/site.config';
 import MobileMenu from './MobileMenu.jsx';
 const currentPath = Astro.url.pathname;
 
-const navItems = [
-    { href: "/", label: "Inicio" },
-    { href: "#proyectos", label: "Proyectos" },
-    { href: "#experiencia", label: "Experiencia" },
-    { href: "#habilidades", label: "Habilidades" },
-    { href: "#contacto", label: "Contacto" },
-];
+const { title, navItems } = siteConfig;
 ---
 
 <header class="w-full h-16 py-4 bg-[#1a1a1a]/90 text-white fixed top-0 left-0 right-0 backdrop-blur-sm z-50">
     <nav class="max-w-5xl mx-auto flex items-center justify-between px-6">
         <div class="text-xl font-bold">
-            <a href="/" class="hover:text-[#2196F3] transition-colors">Miguel Dev</a>
+            <a href="/" class="hover:text-[#2196F3] transition-colors">{title}</a>
         </div>
         <ul class="hidden md:flex gap-6">
             {

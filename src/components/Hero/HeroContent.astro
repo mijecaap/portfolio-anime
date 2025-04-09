@@ -1,6 +1,8 @@
 ---
 import TechIcons from './TechIcons';
-import CV from '../../assets/cv-miguel.pdf';
+import { siteConfig } from '../../config/site.config';
+
+const { cv } = siteConfig;
 ---
 
 <div class="w-full md:w-1/2 z-10 font-poppins fade-in">
@@ -22,7 +24,7 @@ import CV from '../../assets/cv-miguel.pdf';
             <a href="#proyectos" class="btn-primary">
                 Ver Proyectos
             </a>
-            <a href={CV} class="btn-secondary" download="cv-miguel.pdf">
+            <a href={cv.path} class="btn-secondary" download={cv.filename}>
                 Descargar CV
             </a>
         </div>

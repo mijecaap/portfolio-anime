@@ -1,59 +1,7 @@
 ---
 import ExperienceCard from './ExperienceCard.astro';
 import MobileExperienceCard from './MobileExperienceCard.astro';
-import Nttdata from '../../assets/nttdata-logo.png'
-import Lucky from '../../assets/grupo-lucky-logo.png'
-import Xplora from '../../assets/xplora-logo.png'
-import UNMSM from '../../assets/unmsm-logo.png'
-
-const experiences = [
-    {
-        company: "NTT DATA PERÚ S.A.C",
-        icon: Nttdata,
-        iconColor: "text-[#61DAFB]",
-        role: "Software Engineer",
-        period: "2023 - Presente",
-        responsibilities: [
-            "Desarrollo de módulos React y microfrontends",
-            "Implementación de pipelines CI/CD en Github",
-            "Gestión de proyectos en Azure DevOps"
-        ]
-    },
-    {
-        company: "Grupo Lucky",
-        icon: Lucky,
-        iconColor: "text-[#E0234E]",
-        role: "Coordinador de Proyectos Web",
-        period: "2022",
-        responsibilities: [
-            "Liderazgo de equipos de desarrollo",
-            "Gestión de requerimientos y stakeholders",
-            "Optimización de procesos y sistemas"
-        ]
-    },
-    {
-        company: "Grupo Lucky - Xplora",
-        icon: Xplora,
-        iconColor: "text-[#2196F3]",
-        role: "Full Stack Developer",
-        period: "2021 - 2022",
-        responsibilities: [
-            "Desarrollo de frontend con Angular y TypeScript",
-            "Implementación de backend en .NET Core y SQL Server",
-            "Gestión de equipos ágiles y metodologías Scrum"
-        ]
-    },
-    {
-        company: "Universidad Nacional Mayor de San Marcos",
-        icon: UNMSM,
-        iconColor: "text-[#FF9800]",
-        role: "Ingeniería de Software",
-        period: "2017 - 2022",
-        responsibilities: [
-            "Bachiller en Ingeniería de Software",
-        ]
-    }
-];
+import { experienceConfig } from '../../config/experience.config';
 ---
 
 <section id="experiencia" class="py-20">
@@ -63,16 +11,14 @@ const experiences = [
             <span class="block h-1 w-20 bg-[#2196F3] mx-auto mt-4"></span>
         </h2>
         
-        {/* Versión Desktop */}
         <div class="hidden md:flex justify-center items-center gap-16 flex-wrap">
-            {experiences.map(exp => (
+            {experienceConfig.map(exp => (
                 <ExperienceCard experience={exp} />
             ))}
         </div>
 
-        {/* Versión Mobile */}
         <div class="grid grid-cols-1 gap-6 md:hidden">
-            {experiences.map(exp => (
+            {experienceConfig.map(exp => (
                 <MobileExperienceCard experience={exp} />
             ))}
         </div>

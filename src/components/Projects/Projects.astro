@@ -1,66 +1,7 @@
 ---
 import ProjectCard from './ProjectCard.astro';
 import MobileProjectCard from './MobileProjectCard.astro';
-import SolDeAmerica from '../../assets/sol-de-america.jpg';
-
-const projects = [
-    {
-        title: "Sol de América",
-        imageUrl: SolDeAmerica,
-        technologies: ["React", "NestJS", "PostgreSQL"],
-        demoUrl: "https://demo.com",
-        githubUrl: "https://github.com/user/repo",
-        role: "Fullstack Developer",
-        challenge: "Implementación de sistema de pagos y autenticación",
-        highlights: [
-            "Auth + pagos con Stripe",
-            "Arquitectura con NestJS",
-            "CI/CD con GitHub Actions"
-        ]
-    },
-    {
-        title: "Sol de América",
-        imageUrl: SolDeAmerica,
-        technologies: ["React", "NestJS", "PostgreSQL"],
-        demoUrl: "https://demo.com",
-        githubUrl: "https://github.com/user/repo",
-        role: "Fullstack Developer",
-        challenge: "Implementación de sistema de pagos y autenticación",
-        highlights: [
-            "Auth + pagos con Stripe",
-            "Arquitectura con NestJS",
-            "CI/CD con GitHub Actions"
-        ]
-    },
-    {
-        title: "Sol de América",
-        imageUrl: SolDeAmerica,
-        technologies: ["React", "NestJS", "PostgreSQL"],
-        demoUrl: "https://demo.com",
-        githubUrl: "https://github.com/user/repo",
-        role: "Fullstack Developer",
-        challenge: "Implementación de sistema de pagos y autenticación",
-        highlights: [
-            "Auth + pagos con Stripe",
-            "Arquitectura con NestJS",
-            "CI/CD con GitHub Actions"
-        ]
-    },
-    {
-        title: "Sol de América",
-        imageUrl: SolDeAmerica,
-        technologies: ["React", "NestJS", "PostgreSQL"],
-        demoUrl: "https://demo.com",
-        githubUrl: "https://github.com/user/repo",
-        role: "Fullstack Developer",
-        challenge: "Implementación de sistema de pagos y autenticación",
-        highlights: [
-            "Auth + pagos con Stripe",
-            "Arquitectura con NestJS",
-            "CI/CD con GitHub Actions"
-        ]
-    }
-];
+import { projectsConfig } from '../../config/projects.config';
 ---
 
 <section id="proyectos" class="py-20">
@@ -71,13 +12,13 @@ const projects = [
         </h2>
         {/* Versión Desktop */}
         <div class="hidden lg:grid lg:grid-cols-2 gap-16">
-            {projects.map(project => (
+            {projectsConfig.map(project => (
                 <ProjectCard project={project} />
             ))}
         </div>
         {/* Versión Mobile */}
         <div class="grid grid-cols-1 gap-8 lg:hidden">
-            {projects.map(project => (
+            {projectsConfig.map(project => (
                 <MobileProjectCard project={project} />
             ))}
         </div>

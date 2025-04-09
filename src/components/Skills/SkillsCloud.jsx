@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import TagCloud from "./TagCloud";
 import MobileSkills from "./MobileSkills";
-import { skills, skillCategories } from "./skillsData.jsx";
+import { skillsConfig, skillCategories } from "../../config/skills.config";
 
 export default function SkillsCloud() {
   const [activeCategory, setActiveCategory] = useState('all');
@@ -18,8 +18,8 @@ export default function SkillsCloud() {
   }, []);
 
   const filteredSkills = activeCategory === 'all' 
-    ? skills 
-    : skills.filter(skill => skill.categories.includes(activeCategory));
+    ? skillsConfig 
+    : skillsConfig.filter(skill => skill.categories.includes(activeCategory));
 
   return (
     <div className="space-y-8">

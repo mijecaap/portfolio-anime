@@ -1,59 +1,62 @@
 ---
 import { FaLinkedin, FaGithub, FaWhatsapp } from 'react-icons/fa';
 import { MdEmail, MdLocationOn } from 'react-icons/md';
+import { siteConfig } from '../../config/site.config';
+
+const { contacts, location } = siteConfig;
 ---
 
 <div id="contact-icons" class="flex flex-wrap justify-center md:justify-start gap-6 opacity-0 translate-x-[-50px] transition-all duration-1000">
     <a
-        href="https://www.linkedin.com/in/tu-linkedin"
+        href={contacts.linkedin.url}
         target="_blank"
         rel="noopener noreferrer"
         class="contact-icon-link group"
     >
-        <div class="contact-icon bg-[#0077B5]">
+        <div class={`contact-icon ${contacts.linkedin.bgColor}`}>
             <FaLinkedin size={24} />
-            <span class="contact-tooltip">LinkedIn</span>
+            <span class="contact-tooltip">{contacts.linkedin.label}</span>
         </div>
     </a>
 
     <a
-        href="https://github.com/tu-github"
+        href={contacts.github.url}
         target="_blank"
         rel="noopener noreferrer"
         class="contact-icon-link group"
     >
-        <div class="contact-icon bg-[#333]">
+        <div class={`contact-icon ${contacts.github.bgColor}`}>
             <FaGithub size={24} />
-            <span class="contact-tooltip">GitHub</span>
+            <span class="contact-tooltip">{contacts.github.label}</span>
         </div>
     </a>
 
     <a
-        href="mailto:tu@email.com"
+        href={contacts.email.url}
         class="contact-icon-link group"
     >
-        <div class="contact-icon bg-[#EA4335]">
+        <div class={`contact-icon ${contacts.email.bgColor}`}>
             <MdEmail size={24} />
-            <span class="contact-tooltip">Email</span>
+            <span class="contact-tooltip">{contacts.email.label}</span>
         </div>
     </a>
 
     <a
-        href="https://wa.me/1234567890"
+        href={contacts.whatsapp.url}
         target="_blank"
         rel="noopener noreferrer"
         class="contact-icon-link group"
     >
-        <div class="contact-icon bg-[#25D366]">
+        <div class={`contact-icon ${contacts.whatsapp.bgColor}`}>
             <FaWhatsapp size={24} />
-            <span class="contact-tooltip">WhatsApp</span>
+            <span class="contact-tooltip">{contacts.whatsapp.label}</span>
         </div>
     </a>
 
     <div class="contact-icon-link group">
-        <div class="contact-icon bg-[#4285F4]">
+        <div class={`contact-icon ${location.bgColor}`}>
             <MdLocationOn size={24} />
-            <span class="contact-tooltip">Lima, Perú</span>
+            <span class="contact-tooltip">{location.label}</span>
         </div>
     </div>
 </div>

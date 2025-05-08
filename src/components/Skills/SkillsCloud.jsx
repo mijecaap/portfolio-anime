@@ -1,13 +1,25 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import TagCloud from "./TagCloud";
-import { skills, skillCategories } from "./skillsData.jsx";
+import MobileSkills from "./MobileSkills";
+import { skillsConfig, skillCategories } from "../../config/skills.config";
 
 export default function SkillsCloud() {
   const [activeCategory, setActiveCategory] = useState('all');
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   const filteredSkills = activeCategory === 'all' 
-    ? skills 
-    : skills.filter(skill => skill.categories.includes(activeCategory));
+    ? skillsConfig 
+    : skillsConfig.filter(skill => skill.categories.includes(activeCategory));
 
   return (
     <div className="space-y-8">
@@ -28,9 +40,13 @@ export default function SkillsCloud() {
         ))}
       </div>
 
-      {/* TagCloud */}
-      <div className="h-[600px] w-full flex items-center justify-center">
-        <TagCloud words={filteredSkills} />
+      {/* Skills Display */}
+      <div className={`w-full ${isMobile ? 'h-auto' : 'h-[600px]'} flex items-center justify-center`}>
+        {isMobile ? (
+          <MobileSkills skills={filteredSkills} />
+        ) : (
+          <TagCloud words={filteredSkills} />
+        )}
       </div>
     </div>
   );
